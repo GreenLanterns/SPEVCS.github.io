@@ -521,7 +521,6 @@ ul {
 /* product page css start's here */
 .container {
     position: relative;
-    width: 1150px;
     padding: 20px;
     display: flex;
     justify-content: center;
