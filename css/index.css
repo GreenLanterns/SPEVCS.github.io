@@ -147,6 +147,12 @@ header {
         transition: all 0.3s ease 0s;
         margin-right: 12px;
     }
+
+    .product-div{
+        display: inline;
+    }
+  
+  
 }
 
 
@@ -885,6 +891,11 @@ ul {
     position: relative;
     width: 100%;
     margin: 20px;
+    transition: 0.7s all ;
+  }
+
+  .main-product:active{
+    transform: scale(0.96);
   }
 
   .product-img{
