@@ -19,6 +19,7 @@ header {
     align-items: center;
     background-color: #001C30;
     height: 70px;
+    box-shadow: 0 5px 10px 0 rgb(143 104 206 / 16%);
 }
 
 .logo {
@@ -27,7 +28,7 @@ header {
     font-size: 25px;
     font-weight: 1000;
     float: left;
-    margin-right: 48%;
+    margin-right: 40%;
 }
 
 .nav_links {
@@ -132,6 +133,10 @@ header {
 }
 
 @media (max-width: 500px){
+    .product-div {
+        display: grid;
+    }
+     
     .nav_links li {
         padding: 0px 10px;
         font-size: 12px;
@@ -147,6 +152,12 @@ header {
         transition: all 0.3s ease 0s;
         margin-right: 12px;
     }
+
+   
+
+
+
+    
 }
 
 
@@ -668,11 +679,27 @@ ul {
 }
 
 /* product page css start's here */
+
+.product-img-1{
+    height: 338px;
+}
 /* FAQ page css start's here */
 .heading {
     text-align: center;
-    color: #001c30;
     margin-bottom: 30px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.top-567{
+    margin: 50px;
+    
+}
+
+.upper-faq{
+    display: flex;
+    justify-content: center;
 }
 
 .question {
@@ -680,23 +707,26 @@ ul {
     margin-bottom: 10px;
     cursor: pointer;
     color: #001c30;
-    background-color: #79e0ee;
-    padding: 10px;
+    background-color: #ffffff;
+    padding: 24px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .question:hover {
-    background-color: #98eecc;
+    background-color: #98c0ee;
 }
 
 .answer {
     margin-bottom: 20px;
     display: none;
     padding: 10px;
-    background-color: #c5daff;
+    background-color: #8fb8ff;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    
+    
 }
 
 .answer p {
@@ -706,7 +736,9 @@ ul {
 .custom-question {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    background-color: #98c0ee;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -715,6 +747,7 @@ ul {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #454545;
 }
 
 .custom-question textarea {
@@ -729,7 +762,7 @@ ul {
 .custom-question button {
     padding: 10px 20px;
     background-color: #79e0ee;
-    color: #001c30;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -843,16 +876,39 @@ ul {
     width: 195px;
     border-radius: 50%;
     border: #fff 4px solid;
-    margin-top: 46px;
+    margin-top: 90px;
     height: 194px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    animation-name: floating-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    position: relative;
+  }
+  @keyframes floating-animation 
+  {
+    0%{top: 0px;}
+    50%{top: 30px;}
+    100%{top: 0px;}
+  }
+  .dp-cloud-animation-advik
+  {
+    width: 200px;
+    margin-right: 130px;
+    text-align: center;
+    margin-top: -2%;
+  }
+  .dp-cloud-animation-advik2
+  {
+    width: 160px;
+    margin-right: -80px;
+    margin-top: -550px;
   }
 
  
   .hobby{
     color: #fff;
     background: #000046;
-    height: 389px;
     border-radius: 30px;
     font-size: 15px;
     margin: 4px;
@@ -871,7 +927,7 @@ ul {
     left: 0;
     height: 5px;
     width: 0;
-    background: linear-gradient(90deg, rgba(31,141,190,1) 35%, rgba(0,255,59,1) 100%);;
+    background: #00b300;
     z-index: 98;
   }
 
@@ -885,10 +941,19 @@ ul {
     position: relative;
     width: 100%;
     margin: 20px;
+    transition: 0.4s all ;
+  }
+
+
+  .main-product:active{
+    transform: scale(0.96);
   }
 
   .product-img{
     border-radius: 11px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
     box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.473);
   }
 
@@ -900,23 +965,62 @@ ul {
     width: 90%;
     margin-left: 4%;
     text-align: center;
-    height: 19%;
+    height: 15%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
+    overflow: hidden;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
      
   }
+
+  .product-name:hover{
+    height: 90%;
+    color: #454545;
+  }
+
+
+
   
 .product-div{
     display: inline-flex;
 }
 
 
+
 .main-gallery{
     text-align: center;
+}
+
+@media (max-width: 1000px){
+    .product-div{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .main-product .product-name{
+        position: relative;
+        transition: none;
+        margin-left: 0%;
+    }
+
+    .des-product{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-img {
+        width: 80%;
+    }
+
+    .nav_links li {
+        display: none;
+    }
 }
 
 /*Gallery End*/
@@ -924,3 +1028,435 @@ ul {
 h5{
     margin-bottom: 37px;
 }
+
+/*underline*/
+
+
+.a2{
+    position: relative;
+    text-decoration: none;
+  }
+  .a2:after{
+    content: "";
+    position: absolute;
+    background:  -webkit-linear-gradient(328deg,#62ffb0a9,#1fff01c4);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+  }
+  .a2:hover{
+    color: #ffffff;
+  }
+  .a2:hover:after{
+    width: 100%;
+  }
+
+
+  /* Services Page Css Starts */
+
+  .cards{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-1{
+    background-color: #fff;
+    width: 355px;
+    border-radius: 12px;
+    margin: 30px;
+  }
+.card-header-on{
+    color: #fff;
+    background-color: #00dc00;
+    height: 98px;
+    display: flex;
+    font-size: 18px;
+    padding: 12px;
+    text-align: center;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+  .card-header{
+    color: #333;
+    background-color: #e4e4e4;
+    height: 98px;
+    display: flex;
+    font-size: 18px;
+    padding: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-header:hover{
+    color: #fff;
+    background-color: #00dc00;
+  }
+
+  .card-header-title{
+    font-family: "Raleway",sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    letter-spacing: 1.3px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .priceofmember{
+    background: #f6f6f6;
+    height: 109px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    font-size: 44px;
+    color: #414141;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .c-icon{
+    color: #515151;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 2px;
+    margin-bottom: 6%;
+  }
+
+  .time{
+    font-size: 16px;
+  }
+  
+  .adv{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .adv-name{
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato",sans-serif;
+    font-size: 18px;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .adv-name:hover{
+    background-color: #e4e4e4;
+    border-left: #00be00 3px solid;
+  }
+
+  .adv4{
+    color: #a7a7a7;
+    margin-left: 1px;
+  }
+
+  .card-button{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .card-button-class{
+    padding: 20px;
+    font-size: 20px;
+    height: 46px;
+    display: flex;
+    border-radius: 27px;
+    border: 1px solid #2ECC71;
+    color: #2ECC71;
+    background: transparent;
+    margin: 0px 0 32px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .card-button-class:hover{
+    color: #fff;
+    background-color: #2ECC71;
+  }
+
+  .card-button-class-on{
+    padding: 20px;
+    font-size: 20px;
+    height: 46px;
+    color: #fff;
+    background-color: #2ECC71;
+    border: none;
+    display: flex;
+    border-radius: 27px;
+    margin: 0px 0 32px;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  @media (max-width: 500px){
+    .cards{
+        display: grid;
+        justify-content: center;
+    }
+
+    
+}
+
+  /* Services Page Css End */
+
+  /* About page css start */
+
+  .about1 {
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.473);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+}
+
+.h2-2 {
+    color: #f3f3f3;
+}
+
+.p-0 {
+    line-height: 1.6;
+    color: #e4e4e4;
+}
+
+.li-2{
+    color: #e4e4e4;
+}
+
+ 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 25px;
+   margin-left: 35px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #ffffff;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: #176B87;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #001C30;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ .navigation{
+        background-color: #001C30;
+        height: 70px;
+        box-shadow: 0 5px 10px 0 rgb(143 104 206 / 16%);
+    
+    
+ }
+
+ @media (min-width: 1000px){
+
+    #menuToggle {
+        display: none;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+   
+ }
+
+ @media (max-width: 1000px) {
+    header{
+        display: none;
+    }
+    
+ }
+
+ /*Contact Page CSS starts*/
+
+ .main-contact{
+
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 44px;
+    width: 90%;
+    font-size: 20px;
+    height: auto;
+    border-radius: 50px;
+
+
+    position: relative;
+    color: #fff;
+    border-width: 0cap;
+    bottom: 8%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+ }
+
+ .main-contact-2{
+    display: flex;
+    justify-content: center;
+ }
+
+ iframe{
+    width: 100%;
+    border-radius: 7px;
+ }
+ .contact-id-2{
+    font-weight: 200;
+    font-size: 16px;
+ }
+ .contact-id{
+    text-transform: capitalize;
+    font-size: 20px;
+ }
+
+ .email{
+    text-decoration: underline;
+    text-decoration-color: #65ff65;
+    text-decoration-thickness: 3px;
+    color: #fff;
+    text-transform:lowercase;
+ }
