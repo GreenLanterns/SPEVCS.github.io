@@ -1,200 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/index.js"></script>
+    <title>SPEVCS</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/9f1ab97ea8.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <title>Home-Page</title>
-
-    <link
-    rel="stylesheet"
-    data-purpose="Layout StyleSheet"
-    title="Web Awesome"
-    href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d"
-  >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
-    >
 </head>
-
 <body>
-    <!-- <div class="side-bar">
-        <div class="logo-btn">
-            <a class="logo" href="#">SPEVCS.</a>
+    <section class="sec-of-display-1">
+        <div class="part-0">
+        <a class="logo-1" href="index.html">SPEVCS.</a>
+        <p class="p-tag">A SPEVCS is an environmentally sustainable infrastructure designed to charge electric vehicles (EVs) using solar energy.
+            This innovative solution integrates solar panels to harness renewable energy and charging equipment to offer a convenient and eco-friendly method of charging EVs.</p>
         </div>
-    <div class="icon-bar">
-        <div class="icon-in-bar" id="part-1">
-            <i class="fa-light fa-house fa-xl" ></i>
-            <p class="p-of-bar" >Home</p>
-        </div>
-        <div class="icon-in-bar" id="part-2">
-            <i class="fa-light fa-users fa-xl"></i>
-            <p class="p-of-bar" >Profile</p>
-        </div>
-        <div class="icon-in-bar" id="part-3">
-            <i class="fa-thin fa-phone fa-xl"></i>
-            <p class="p-of-bar" >Contact</p>
-        </div>
-        <div class="icon-in-bar" id="part-4">
-            <i class="fa-thin fa-image fa-xl"></i>
-            <p class="p-of-bar" >Gallery</p>
-        </div>
-        <div class="icon-in-bar" id="part-5">
-            <i class="fa-thin fa-shop fa-xl"></i>
-            <p class="p-of-bar" >Shop</p>
-        </div>
+        <div class="display-1">
+            <form id="emailForm">
+                <input type="email" placeholder="Email Address" id="emailInput" name="email" autocomplete="off" required>
+                <button type="button" id="checkButton" onclick="checkEmail()">Get Started &rarr;</button>
+              </form>
+            
+              <div id="resultMessage"></div>
+        <p class="help-0">I already have an account</p>
     </div>
-    </div> -->
-    <button id="scrollToTop" onclick="scrollToTop()"></button>
-    <div id="scrollProgress"></div>
-    <div class="topnav">
-        <header>
-            <a class="logo" href="index.html">SPEVCS.</a>
-             <nav>
-                 <ul class="nav_links">
-                    <li><a href="Services.html" class="a2">Services</a></li>
-                     <li><a href="gallery.html" class="a2">Gallery</a></li>
-                     <li><a href="Product.html" class="a2">Products</a></li>
-                     <li><a href="about.html" class="a2">About</a></li>
-                     <li><a href="Contact.html" class="a2">Contact</a></li>
-                 </ul>
-             </nav>
-             <a class="cta" href="#">SignIn</a>
-         </header>
-<nav role="navigation" class="navigation">
-    <div id="menuToggle">
-      <input type="checkbox" />
+    </section>
+    <div class="sec-display-end"></div>
+    <section class="sec-of-display-2" style="height: 0vh;">
 
-      <span></span>
-      <span></span>
-      <span></span>
+    </section>
+    <script>
+        function checkEmail() {
+          var emailInput = document.getElementById('emailInput');
+          var resultMessage = document.getElementById('resultMessage');
+    
+          // Basic email validation using a regular expression
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          var isValidEmail = emailRegex.test(emailInput.value);
+    
+          if (isValidEmail) {
+            resultMessage.style.color = '#72ff6b';
+            resultMessage.innerHTML = 'Email is valid!';
 
-      <ul id="menu">
-        <a href="Services.html"><li>Services</li></a>
-        <a href="gallery.html"><li>Gallery</li></a>
-        <a href="Product.html"><li>Products</li></a>
-        <a href="about.html"><li>About</li></a>
-        <a href="contact.html"><li>Contact</li></a>
-      </ul>
-    </div>
-  </nav>
-    </div>
-<div class="screen">
-    <div id="slider">
-        <figure>
-          <img src="images\img1.png" alt>
-          <img src="images\img2.jpeg" alt>
-          <img src="images\15.jpeg" alt>
-          <img src="images\IMG_20231201_152829.jpeg" alt>
-          <img src="images\image.png" alt>
-        </figure>
-      </div>
-      <br>
-      <div class="home-data_main">
-      <div class="home-data">
-        <h2>SPEVCS</h2>
-            <h5>AN ELECTRIC VEHICLE CHARGER</h5>
-        <p class="home-p">
-            A SPEVCS is an environmentally sustainable infrastructure designed to charge electric vehicles (EVs)
-                    using solar energy.<br>
-                    This innovative solution integrates solar panels to harness renewable energy and charging equipment
-                    to offer a convenient and eco-friendly method of charging EVs.
-        </p>
-      </div>
-    </div>
-</div>
-    </div>
-    <div class="pop-up-1" style="display: flex;
-    justify-content: center;">
-    <div class="pop-up">
-        <div class="img-holder-1">
-            <img src="images/GOOGLE.jpg" class="img-499">
-        </div>
-        <div class="data-409">
-            <h1 class="header-text-0">
-                Create an account and stay updated
-            </h1>
-            <h2 class="text-09">
-                "Charge up effortlessly with our EV Charging Hub! Experience seamless access to sustainable driving—log in securely with Google. Unlock a world of eco-friendly travel, find charging stations, and manage your EV journey effortlessly. Join us in shaping a greener future, one click at a time."
-            </h2>
-            <button class="pop-up-btn">Continue with <span class="google">Google</span></button>
-        </div>
-    </div>
-</div>
-    <footer class="footer">
-        <div class="container-3">
-            <div class="row">
-                <div class="footer-col">
-                    <a href="About.html">
-                        <h4>Company</h4>
-                    </a>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="Services.html">Our Service</a></li>
-                        
-                        <li><a href="Product.html">Products</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <a href="Credit.html">
-                        <h4>Credits</h4>
-                    </a>
-                    <ul>
-                        <li><a href="Ishan.html">Ishan Rajvanshi</a></li>
-                        <li><a href="abhiraj.html">Abhiraj</a></li>
-                        <li><a href="Reet.html">Reet Agrawal</a></li>
-                        <li><a href="harshit.html">Harshit Jangid</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <a href="FAQ.html">
-                        <h4>Get Help</h4>
-                    </a>
-                    <ul>
-                        <li><a href="FAQ.html">FAQ</a></li>
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Return</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Social Links</h4>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@greenlanterns" target="_blank"><i
-                                class="fab fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+            // If the email is valid, redirect to the main page
+            window.location.href = 'main.html';
+          } else {
+            resultMessage.style.color = '#ff1b1b';
+            resultMessage.style.fontFamily = 'Inter';
+            resultMessage.innerHTML = 'Please enter a valid email address.';
+          }
+        }
+      </script>
 </body>
 </html>
