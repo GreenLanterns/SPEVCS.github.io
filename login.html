@@ -1,75 +1,172 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://kit.fontawesome.com/9f1ab97ea8.js" crossorigin="anonymous"></script>
-    <title>Login</title>
+    <title>Login Page</title>
 </head>
 
 <body>
-    <button id="scrollToTop" onclick="scrollToTop()"></button>
-  <div id="scrollProgress"></div>
-    <div class="topnav">
-        <header>
-            <a class="logo" href="index.html">SPEVCS.</a>
-             <nav>
-                 <ul class="nav_links">
-                    <li><a href="Services.html" class="a2">Services</a></li>
-                     <li><a href="gallery.html" class="a2">Gallery</a></li>
-                     <li><a href="Product.html" class="a2">Products</a></li>
-                     <li><a href="about.html" class="a2">About</a></li>
-                     <li><a href="Contact.html" class="a2">Contact</a></li>
-                 </ul>
-             </nav>
-             <a class="cta" href="#">SignIn</a>
-         </header>
-<nav role="navigation" class="navigation">
-    <div id="menuToggle">
-      <input type="checkbox" />
+<style>
+    body{
+        background-color: #c9d6ff;
+background:linear-gradient(to right, #131313, #616e9a);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100vh;
+font-family: 'Montserrat', sans-serif;
+    }
 
-      <span></span>
-      <span></span>
-      <span></span>
+    @media (max-width: 800px){
+      body{
+        background: #0f1014;
+        display: flow;
+      } 
 
-      <ul id="menu">
-        <a href="Services.html"><li>Services</li></a>
-        <a href="gallery.html"><li>Gallery</li></a>
-        <a href="Product.html"><li>Products</li></a>
-        <a href="about.html"><li>About</li></a>
-        <a href="contact.html"><li>Contact</li></a>
-      </ul>
+      .container1{
+        display: none;
+      }
+
+      .top-main-mobile-login{
+        display: flow;
+      }
+}
+</style>
+
+    <div class="container1" id="container1">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-    </div>
 
-        <div class="container-login">
-            <div class="card-login">
-                <h1 align="center" style="margin-top: 25px;">Sign In</h1>
-                <form>
-                    <p style="font-size: 24px;">
-                        <i class="fas fa-user"></i>
-                        <input placeholder="Enter your username"><br>
-                        <i class="fas fa-key"></i>
-                        <input type="password" placeholder="Password">
-                    </p>
-                    <br><br><br>
-                    <button class="login-button" align="center">Login</button>
-                    <button class="login-button" align="center" style="padding-top: 5px;margin-top: 5px;">Sign Up</button>
-                    <br><br><br><br>
+    <script>
+      const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+    </script>
+
+    <!-- Mobile Login page HTML Starts -->
+<div class="top-main-mobile-login">
+    <div class="login-header-0">
+        <a class="logo-14" href="index.html">
+            SPEVCS.
+        </a>
+    </div>
+    <div class="box-Sign">
+        <h1 class="sign-in-text">
+            Sign In
+        </h1>
+        <input type="text" placeholder="Email or phone number" class="input-text-email">
+        <input type="password" placeholder="Password" class="pass-input-0">
+        <input type="submit" class="btn-login-page" placeholder="Get Started">
+        <div class="in-line-box-0">
+       <div class="pack-1"> <input type="checkbox" placeholder="Remember me" class="input-rem"> Remember me</div>
+        <p class="help-1">Need help?</p>
+        </div>
+        <span class="new-web">New to SPEVCS?<span class="new-opt-sign-up">Sign up now.</span></span>    
+    </div>
+    <footer class="footer">
+        <div class="container-3">
+            <div class="row">
+                <div class="footer-col">
+                    <a href="About.html">
+                        <h4>Company</h4>
+                    </a>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="Services.html">Our Service</a></li>
+                        
+                        <li><a href="Product.html">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <a href="Credit.html">
+                        <h4>Credits</h4>
+                    </a>
+                    <ul>
+                        <li><a href="Ishan.html">Ishan Rajvanshi</a></li>
+                        <li><a href="abhiraj.html">Abhiraj</a></li>
+                        <li><a href="Reet.html">Reet Agrawal</a></li>
+                        <li><a href="harshit.html">Harshit Jangid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <a href="FAQ.html">
+                        <h4>Get Help</h4>
+                    </a>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Return</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social Links</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100093572034956"><i
-                                class="fab fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/spevcs_xx/" target="_blank"><i
-                                class="fab fa-brands fa-instagram"></i></i></a>
-                        <a href="https://www.linkedin.com/in/green-lanterns-365546280/" target="_blank"><i
-                                class="fab fa-brands fa-linkedin-in"></i></a>
                         <a href="https://www.youtube.com/@greenlanterns" target="_blank"><i
                                 class="fab fa-brands fa-youtube"></i></a>
                     </div>
-                </form>
-            </div>  
+                </div>
+            </div>
         </div>
-    </div>
+    </footer>
+</div>
 </body>
+
+</html>
