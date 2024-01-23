@@ -83,6 +83,8 @@ body{
 @media (min-width: 1000px){
     .main-subscribe{
         display: flex;
+            justify-content: center;
+
     }
 
     .main19{
