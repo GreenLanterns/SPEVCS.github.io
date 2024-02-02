@@ -14,10 +14,8 @@ body{
 }
 
 .header-0{
-    padding: 12px;
     align-items: center;
     display: flex;
-    margin: 15px;
     width: 90%;
     justify-content: space-between;
 }
@@ -29,6 +27,7 @@ body{
     font-weight: 1000;
     font-family: 'Poppins', sans-serif;
     padding: 12px;
+    margin-right: 44%;
 }
 
 .login-88{
@@ -83,8 +82,7 @@ body{
 @media (min-width: 1000px){
     .main-subscribe{
         display: flex;
-            justify-content: center;
-
+        justify-content: center;
     }
 
     .main19{
@@ -474,7 +472,6 @@ font-size: 12px
     text-decoration: none;
     color: #FBFFDC;
     display: flex;
-    margin-top: 32px;
     font-weight: 1000;
     right: 22px;
     position: relative;

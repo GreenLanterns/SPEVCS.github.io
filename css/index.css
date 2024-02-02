@@ -22,7 +22,7 @@ header {
     align-items: center;
     background: border-box;
     height: 70px;
-    box-shadow: 0 5px 10px 0 rgb(143 104 206 / 16%);
+    box-shadow: 0 5px 20px 0px rgb(29 109 245 / 26%);
 }
 
 .logo {
@@ -31,7 +31,7 @@ header {
     font-size: 25px;
     font-weight: 1000;
     float: left;
-    margin-right: 60%;
+    margin-right: 44%;
     padding: 12px;
 }
 
@@ -57,14 +57,11 @@ header {
     transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover {
-    color: #228B22;
-}
 
 .cta {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: #00a800;
+    background-color: #1d6df5;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -73,7 +70,7 @@ header {
 }
 
 .cta:hover {
-    background-color: #228B22;
+    background-color: #185fd9;
 }
 
 /* nav bar css ends here */
@@ -286,7 +283,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #228B22;
+    background-color: #1d6df5;
     box-sizing: border-box;
     width: 30px;
     height: 2px;
@@ -341,13 +338,15 @@ ul {
 }
 
 .container-login .social-links a:hover {
-    color: #24262b;
-    background-color: #79E0EE;
+    color: #ffffff;
+    background-color: #ff0000;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 0px 29px 8px;
 }
 
 .footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #79E0EE;
+    color: #ffffff;
+    background-color: #ff0000;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 0px 29px 8px;
 }
 
 /* footer's code ends here */
@@ -835,7 +834,7 @@ ul {
     left: 0;
     height: 5px;
     width: 0;
-    background: linear-gradient(90deg, rgb(255 114 192) 0%, rgb(123 95 253) 50%, rgb(74 215 241) 88%, rgb(0 255 53) 100%);
+    background: linear-gradient(85deg, rgb(216 74 255) 0%, rgb(29 109 245) 50%, rgb(66 211 255) 100%);
     z-index: 98;
   }
 
@@ -950,7 +949,7 @@ h5{
   .a2:after{
     content: "";
     position: absolute;
-    background:  -webkit-linear-gradient(328deg,#62ffb0a9,#1fff01c4);
+    background:  linear-gradient(85deg, rgb(29 109 245) 0%, rgb(29 109 245) 50%, rgb(66 211 255) 100%);
     height: 3px;
     width: 0;
     left: 0;
@@ -1293,9 +1292,8 @@ h5{
  }
 
  .navigation{
-        background-color: #001C30;
+        background-color: transparent;
         height: 70px;
-        box-shadow: 0 5px 10px 0 rgb(143 104 206 / 16%);
     
     
  }
@@ -1885,3 +1883,6 @@ justify-content: center;
   }
 
 
+
+
+  
