@@ -962,3 +962,171 @@ margin: 4px;
     align-items: center;
 }
 
+/*About Page CSS*/
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+.header-09 {
+	font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+
+	font-size: clamp(4rem, 6vw + 3rem, 8rem);
+	background: linear-gradient(hsl(0, 0%, 100%), hsl(0 0% 20%));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: scale-down linear both;
+	animation-timeline: scroll();
+	animation-range: 0 50vh;
+	margin: 0%;
+}
+
+.uppertextSPEVCS{
+	font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+	background: #e0e0e0;
+	font-size: clamp(1rem, 3vw + 1rem, 2rem);
+	-webkit-background-clip: text;
+	background-clip: text;
+	margin: 0%;
+	margin-bottom: -24px;
+	color: transparent;
+	animation: scale-down linear both;
+	animation-timeline: scroll();
+	animation-range: 0 50vh;
+}
+
+.p-012{
+	width: 40%;
+	color: #ffffffc9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes scale-down {
+	to { scale: 0.75; }
+}
+
+.content-0 {
+  background: black;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  scale: 0.95;
+}
+
+@supports (animation-timeline: scroll()) {
+	.content-0 {
+	  view-timeline: --content;
+	  animation: grow linear both;
+	  animation-timeline: scroll();
+	  animation-range: 0 50vh;
+	}
+}
+
+@keyframes grow {
+	to { scale: 1; }
+}
+
+.content-0 svg {
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 0;
+  overflow: visible !important;
+  z-index: -1;
+}
+
+.content-0 svg path {
+  stroke-width: clamp(2rem, 2vw, 4rem);
+}
+
+@media only screen and (orientation: portrait) {
+  svg {
+    display: none;
+  }
+}
+
+.about-main {
+  height: 100vh;
+}
+
+main > .about-main {
+  height: 80vh;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  width: 100%;
+}
+
+.backers path {
+	stroke: hsl(0 0% 50%);
+}
+
+.fillers path {
+	stroke: hsl(0 100% 50% / 1);
+}
+
+.fillers path:nth-of-type(1) {
+	--len: 8620;
+	stroke: hsl(140 80% 60%);
+}
+.fillers path:nth-of-type(2) {
+	--len: 7200;
+	stroke: hsl(140 90% 60%);
+}
+.fillers path:nth-of-type(3) {
+	--len: 7952;
+	stroke: hsl(140 90% 50%);
+}
+
+.fillers path {
+	stroke-dasharray: var(--len);
+	stroke-dashoffset: var(--len);
+}
+
+@supports (animation-timeline: scroll()) {
+	.fillers path {
+		animation: fill linear both;
+		animation-timeline: --content;
+		animation-range: entry-crossing -38% exit 12%;
+	}
+}
+
+@keyframes fill {
+	to { stroke-dashoffset: 0; }
+}
+
+.content-0 .about-main {
+	display: grid;
+	align-content: center;
+	padding: 0 6rem;
+}
+
+.about-main .h2-about {
+	font-size: clamp(2rem, 4vw + 1rem, 4rem);
+	font-weight: 600;
+	color: hsl(0 0% 90%);
+	width: 10ch;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-main:nth-of-type(3),
+.about-main:nth-of-type(4) {
+	justify-items: end;
+}
+
+
+
+/*About Page Css Done*/
